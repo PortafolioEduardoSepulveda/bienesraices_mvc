@@ -36,8 +36,10 @@ app.set('views', './views');
 app.use( express.static('public') )
 
 //Routing
+app.use('/', appRoutes)
 app.use('/auth', usuarioRoutes)
 app.use('/', propiedadesRoutes)
+app.use('/api', apiRoutes)
 
 //definir puerto y arrancar proyecto
 const port = 3000;
